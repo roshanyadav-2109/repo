@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITM BS Degree: The Complete Picture & The Path to Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg-color: #1a1a1a;
+            --primary-text-color: #f0f0f0;
+            --secondary-text-color: #a0a0a0;
+            --accent-color: #00aaff;
+            --green-color: #28a745;
+            --red-color: #dc3545;
+            --border-color: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text-color);
+            overflow-x: hidden;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 2rem;
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+        }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; margin-bottom: 1rem; }
+        .hero p { font-size: clamp(1rem, 2vw, 1.5rem); max-width: 800px; color: var(--secondary-text-color); margin-bottom: 2rem; }
+        .scroll-down { position: absolute; bottom: 2rem; color: var(--primary-text-color); font-size: 1rem; animation: bounce 2s infinite; }
+        .scroll-down i { display: block; font-size: 2rem; }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        /* --- General Section Styling --- */
+        .topic-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--border-color); }
+        .topic-section:last-child { border-bottom: none; }
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 600; margin-bottom: 1rem; color: var(--accent-color); }
+        .section-subtitle { text-align: center; font-size: 1.1rem; font-weight: 300; margin-bottom: 4rem; color: var(--secondary-text-color); max-width: 800px; margin-inline: auto; }
+
+        /* --- Text-focused Pivot Section --- */
+        .pivot-section {
+            background-color: var(--card-bg-color);
+            border-top: 1px solid var(--border-color);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .pivot-section:last-of-type {
+             border-bottom: 1px solid var(--border-color);
+        }
+        .pivot-section h2 { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+        .pivot-section p { max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--secondary-text-color); line-height: 1.8; }
+
+        /* --- Vertical Timeline Cards --- */
+        .timeline-container { position: relative; display: flex; flex-direction: column; gap: 2rem; }
+        .timeline-container::before { content: ''; position: absolute; left: 25px; top: 10px; bottom: 10px; width: 3px; background-color: var(--border-color); border-radius: 2px; }
+        .timeline-card { position: relative; padding: 1.5rem 1.5rem 1.5rem 5rem; background-color: var(--card-bg-color); border: 1px solid var(--border-color); border-radius: 10px; }
+        .timeline-card .icon { position: absolute; left: 0; top: 50%; transform: translate(-50%, -50%); background-color: var(--accent-color); color: white; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-size: 1.5rem; border: 3px solid var(--bg-color); }
+        .timeline-card .content h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--primary-text-color); }
+        .timeline-card .content p { color: var(--secondary-text-color); }
+
+        /* --- Horizontal Flowchart Styling --- */
+        .flowchart-container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .flow-card { flex: 1; min-width: 200px; padding: 1.5rem; text-align: center; background: var(--card-bg-color); border: 1px solid var(--border-color); border-radius: 10px; position: relative; }
+        .flow-card .value { font-size: 2.5rem; font-weight: 700; color: var(--accent-color); }
+        .flow-card .label { font-size: 1rem; color: var(--secondary-text-color); }
+        .flow-card:not(:last-child)::after { content: '\f061'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--secondary-text-color); }
+
+        /* --- Bar Chart Styling --- */
+        .chart-container { display: grid; gap: 2.5rem; }
+        .chart-group h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary-text-color); }
+        .bar { display: flex; align-items: center; margin-bottom: 0.75rem; }
+        .bar-label { width: 80px; color: var(--secondary-text-color); font-size: 0.9rem; }
+        .bar-bg { flex-grow: 1; background-color: var(--card-bg-color); border-radius: 5px; height: 30px; }
+        .bar-fill { height: 100%; background-color: var(--accent-color); border-radius: 5px; transform: scaleX(0); transform-origin: left; transition: transform 1s ease-out; }
+        .bar-value { margin-left: 1rem; font-weight: 600; }
+        
+        /* --- Attrition Chart --- */
+        .attrition-chart-container { display: flex; justify-content: space-around; align-items: flex-end; height: 350px; background-color: var(--card-bg-color); padding: 2rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); }
+        .attrition-bar-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; justify-content: flex-end; }
+        .attrition-bar { width: 70%; border-radius: 5px 5px 0 0; position: relative; transform: scaleY(0); transform-origin: bottom; transition: transform 1s ease-out; }
+        .attrition-bar .bar-value { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 600; font-size: 1.1rem; }
+        .attrition-bar-label { margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--secondary-text-color); }
+        
+        /* --- Pros and Cons / Two Path Grid --- */
+        .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .column-card { background-color: var(--card-bg-color); padding: 2rem; border-radius: 10px; }
+        .column-card h3 { font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; }
+        .column-card i { font-size: 1.5rem; margin-right: 1rem; }
+        .column-card ul { list-style: none; }
+        .column-card li { display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .column-card li i { margin-top: 5px; }
+        #pros-list h3, #smart-path h3 { color: var(--green-color); }
+        #pros-list i, #smart-path i { color: var(--green-color); }
+        #cons-list h3, #hard-path h3 { color: var(--red-color); }
+        #cons-list i, #hard-path i { color: var(--red-color); }
+        
+        /* --- FAQ Accordion Styling --- */
+        .faq-question {
+            background-color: var(--card-bg-color); color: var(--primary-text-color); cursor: pointer;
+            padding: 18px 20px; width: 100%; border: none; text-align: left;
+            outline: none; font-size: 1.1rem; font-weight: 600; font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease; border-top: 1px solid var(--border-color);
+        }
+        .faq-item:first-child .faq-question { border-top: none; }
+        .faq-question:hover, .faq-question.active { background-color: #2a2a2a; }
+        .faq-question::after {
+            content: '+'; color: var(--accent-color); font-weight: bold; float: right;
+            margin-left: 5px; font-size: 1.5rem; transition: transform 0.3s ease;
+        }
+        .faq-question.active::after { content: "−"; transform: rotate(180deg); }
+        .faq-answer {
+            padding: 0 20px; background-color: var(--card-bg-color);
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+        }
+        .faq-answer p { padding: 20px 0; color: var(--secondary-text-color); line-height: 1.7; }
+
+        /* --- Animation Classes (for JS) --- */
+        .hidden { opacity: 0; transform: translateY(50px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+        .visible .bar-fill { transform: scaleX(1); }
+        .visible .attrition-bar { transform: scaleY(1); }
+        
+        /* --- Responsiveness --- */
+        @media (max-width: 768px) {
+            .flowchart-container { flex-direction: column; gap: 3rem; }
+            .flow-card:not(:last-child)::after { content: '\f063'; right: 50%; top: 100%; transform: translate(50%, 10px); }
+            .timeline-container::before { left: 20px; }
+            .timeline-card { padding-left: 4.5rem; }
+            .timeline-card .icon { width: 40px; height: 40px; font-size: 1.2rem; }
+            .two-column-grid { grid-template-columns: 1fr; }
+            .attrition-bar .bar-value { font-size: 0.8rem; }
+            .attrition-bar-label { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>IITM BS Degree: The Complete Picture</h1>
+        <p>Data, opportunities, and the smart path to success in India's leading online degree program.</p>
+        <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Student Funnel: A Data-Driven Look</h2>
+        <p class="section-subtitle hidden">From initial interest to active learning, the numbers paint a clear picture of the student journey since 2021.</p>
+        <div class="flowchart-container">
+            <div class="flow-card hidden">
+                <div class="value">168,740</div>
+                <div class="label">Applications</div>
+            </div>
+            <div class="flow-card hidden">
+                <div class="value">63,143</div>
+                <div class="label">Qualified (~37%)</div>
+            </div>
+            <div class="flow-card hidden">
+                <div class="value">52,144</div>
+                <div class="label">Started (~82%)</div>
+            </div>
+            <div class="flow-card hidden">
+                <div class="value">38,534</div>
+                <div class="label">Currently Active (~73%)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Full Picture: Perseverance & Attrition</h2>
+        <p class="section-subtitle hidden">The journey requires resilience. This graph shows the reality of the drop-off rates at each major stage, highlighting the challenge of the Qualifier and beyond.</p>
+        <div class="attrition-chart-container hidden">
+            <div class="attrition-bar-wrapper">
+                <div class="attrition-bar" style="height: 100%; background-color: var(--accent-color);">
+                    <div class="bar-value">168,740</div>
+                </div>
+                <div class="attrition-bar-label">Total Applicants</div>
+            </div>
+            <div class="attrition-bar-wrapper">
+                <div class="attrition-bar" style="height: 62.5%; background-color: var(--red-color);">
+                     <div class="bar-value">105,597</div>
+                </div>
+                <div class="attrition-bar-label">Did Not Qualify / Re-attempting</div>
+            </div>
+            <div class="attrition-bar-wrapper">
+                <div class="attrition-bar" style="height: 37.5%; background-color: var(--accent-color);">
+                     <div class="bar-value">63,143</div>
+                </div>
+                <div class="attrition-bar-label">Qualified</div>
+            </div>
+            <div class="attrition-bar-wrapper">
+                <div class="attrition-bar" style="height: 22.8%; background-color: var(--green-color);">
+                     <div class="bar-value">38,534</div>
+                </div>
+                <div class="attrition-bar-label">Currently Active Students</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="topic-section">
+        <h2 class="section-title hidden">Academic Performance by the Numbers</h2>
+        <p class="section-subtitle hidden">CGPA distribution reflects the increasing rigor of the program. High achievement is possible but requires dedication.</p>
+        <div class="chart-container">
+            <div class="chart-group hidden">
+                <h3>Foundation Level</h3>
+                <div class="bar"><div class="bar-label">9-10 CGPA</div><div class="bar-bg"><div class="bar-fill" style="width: 45%;"></div></div><div class="bar-value">4,723</div></div>
+                <div class="bar"><div class="bar-label">8-9 CGPA</div><div class="bar-bg"><div class="bar-fill" style="width: 25%;"></div></div><div class="bar-value">2,006</div></div>
+            </div>
+             <div class="chart-group hidden">
+                <h3>BS Degree Level</h3>
+                <div class="bar"><div class="bar-label">9-10 CGPA</div><div class="bar-bg"><div class="bar-fill" style="width: 25%;"></div></div><div class="bar-value">154</div></div>
+                <div class="bar"><div class="bar-label">8-9 CGPA</div><div class="bar-bg"><div class="bar-fill" style="width: 36%;"></div></div><div class="bar-value">224</div></div>
+                 <div class="bar"><div class="bar-label"><7 CGPA</div><div class="bar-bg"><div class="bar-fill" style="width: 38%;"></div></div><div class="bar-value">228</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pivot-section hidden">
+        <h2 class="hidden">The Big Question: "Can I Really Do This Alone?"</h2>
+        <p class="hidden">This is the #1 concern for serious students. The answer isn't a simple 'yes' or 'no'. It's about understanding the real challenges and choosing the right strategy for **YOU**.</p>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Evolving Challenge: The Bar is Getting Higher</h2>
+        <p class="section-subtitle hidden">The program of today isn't the same as it was in 2021. IIT Madras is actively increasing rigor to find students who don't just memorize, but truly understand.</p>
+        <div class="timeline-container">
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: #ff9900;"><i class="fas fa-chart-bar"></i></div>
+                <div class="content">
+                    <h3>Harder Courses, Stricter Passing</h3>
+                    <p>The May 2024 term showed a significant jump in difficulty for key courses like Maths 2 and Stats 2. Even foundational subjects like Python are becoming more rigorous.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: #ff9900;"><i class="fas fa-user-shield"></i></div>
+                <div class="content">
+                    <h3>Stricter Examination Policies</h3>
+                    <p>With enhanced proctoring and stricter evaluation policies, there is zero room for error. The focus is entirely on academic integrity and genuine knowledge.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: #ff9900;"><i class="fas fa-lightbulb"></i></div>
+                <div class="content">
+                    <h3>College is About Exploring, Not Mugging</h3>
+                    <p>IITM wants students who participate, build projects, and explore concepts deeply. When you're struggling alone, you're forced to mug just to survive. You lose the chance to truly learn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Opportunity Paradox</h2>
+        <p class="section-subtitle hidden">The IITM brand opens doors, but it's your portfolio that gets you through them. The degree alone is not enough.</p>
+        <div class="timeline-container">
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--red-color);"><i class="fas fa-briefcase"></i></div>
+                <div class="content"><h3>Companies Hire Skills, Not Just Degrees</h3><p>Recruiters will ask, "Show me your projects." A degree gets the interview; a strong portfolio of practical work gets the job.</p></div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--red-color);"><i class="fas fa-project-diagram"></i></div>
+                <div class="content"><h3>The Portfolio Challenge</h3><p>Building a job-winning portfolio while juggling rigorous courses is a major hurdle for standalone students.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Savvy Student's Strategy: Reinvest Your Savings</h2>
+        <p class="section-subtitle hidden">You're saving lakhs compared to an offline college. Don't just save that money—reinvest it in your career to get ahead of the competition.</p>
+        <div class="timeline-container">
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-code"></i></div>
+                <div class="content">
+                    <h3>Build Experience with Freelance Work</h3>
+                    <p>Actively seek freelance projects on various platforms. This is the fastest way to build a real-world portfolio, earn money, and apply what you learn.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-trophy"></i></div>
+                <div class="content">
+                    <h3>Attend Events & Competitions</h3>
+                    <p>Use the money you save on hostel fees to travel to hackathons, tech conferences, and exclusive competitions. This is where you network and make a name for yourself.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-network-wired"></i></div>
+                <div class="content">
+                    <h3>Go Where the Opportunities Are</h3>
+                    <p>Building a network online is good, but meeting people in person is better. Attending industry events gives you an edge that remote-only students miss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">The Smart Path vs. The Hard Path</h2>
+        <p class="section-subtitle hidden">You have a choice. Both require hard work, but one is designed for efficiency and a higher probability of success.</p>
+        <div class="two-column-grid">
+            <div id="hard-path" class="column-card hidden">
+                <h3><i class="fas fa-exclamation-circle"></i> The Hard Path (Standalone)</h3>
+                <ul>
+                    <li><i class="fas fa-times"></i> Fighting self-doubt and demotivation alone.</li>
+                    <li><i class="fas fa-times"></i> Spending hours searching for answers online.</li>
+                    <li><i class="fas fa-times"></i> Guessing which projects will impress recruiters.</li>
+                    <li><i class="fas fa-times"></i> Leaving your success and career outcome to chance.</li>
+                </ul>
+            </div>
+            <div id="smart-path" class="column-card hidden">
+                <h3><i class="fas fa-check-circle"></i> The Smart Path (Structured Support)</h3>
+                 <ul>
+                    <li><i class="fas fa-check"></i> Leveraging a peer network for motivation and accountability.</li>
+                    <li><i class="fas fa-check"></i> Getting doubts cleared instantly by experts and peers.</li>
+                    <li><i class="fas fa-check"></i> Building a guided, high-impact project portfolio.</li>
+                    <li><i class="fas fa-check"></i> Following a proven strategy to maximize your results.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">A Look Inside Our Structured Support Batches</h2>
+        <p class="section-subtitle hidden">We provide a comprehensive ecosystem for Qualifiers, Foundation, and Diploma levels, ensuring you have everything you need to excel.</p>
+        <div class="timeline-container">
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="content">
+                    <h3>Daily Live Classes & Practice</h3>
+                    <p>Master concepts with daily live classes, dedicated practice sessions, and DPPs (Daily Practice Problems) that build a rock-solid foundation, day by day.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-headset"></i></div>
+                <div class="content">
+                    <h3>Dedicated Doubt-Solving</h3>
+                    <p>Never let a doubt slow you down. Our dedicated doubt classes provide the perfect platform to get your questions answered by expert instructors.</p>
+                </div>
+            </div>
+             <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-file-signature"></i></div>
+                <div class="content">
+                    <h3>Rigorous Practice Tests</h3>
+                    <p>Prepare for the real thing with our regular practice tests. They are designed to simulate the exam environment, helping you master time management and strategy.</p>
+                </div>
+            </div>
+            <div class="timeline-card hidden">
+                <div class="icon" style="background-color: var(--green-color);"><i class="fas fa-user-graduate"></i></div>
+                <div class="content">
+                    <h3>Personalized Mentorship</h3>
+                    <p>Stay motivated and on track with guidance from experienced mentors who have successfully navigated the program. They help with strategy, goal-setting, and career advice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topic-section">
+        <h2 class="section-title hidden">Frequently Asked Questions</h2>
+        <div class="faq-container hidden">
+            <div class="faq-item">
+                <button class="faq-question">Who are the instructors and mentors?</button>
+                <div class="faq-answer"><p>Our team consists of IITM BS graduates who have excelled in the program, along with industry professionals. They have firsthand experience with the exact curriculum and challenges you will face, providing the most relevant guidance.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Are the classes live or recorded?</button>
+                <div class="faq-answer"><p>Our core classes are live to ensure interactive learning and on-the-spot doubt clarification. For your convenience, every single session is also recorded and made available within 24 hours, so you never have to worry about missing a class due to a schedule conflict.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is this support available for all stages?</button>
+                <div class="faq-answer"><p>Yes. We offer dedicated, specialized batches for every stage of your journey: from the initial Qualifier exam to the Foundation level and all the way through the more advanced Diploma subjects.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Why should I join a paid batch with free resources available online?</button>
+                <div class="faq-answer"><p>Free resources are often scattered, outdated, and lack a coherent structure. Our batches provide a systematic, day-by-day plan, expert guidance, and a community of serious peers. It's a strategic investment to save you hundreds of hours, reduce struggle, and significantly maximize your chances of success.</p></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pivot-section hidden">
+        <h2 class="hidden"><i class="fas fa-heart-pulse"></i> A Final Thought: Your Journey, Your Choice</h2>
+        <p class="hidden">
+            You are about to enter a world filled with information. YouTube, social media... these are places where you can build yourself up, or get completely lost. You will find people showing off, spreading negativity, or selling you the dream of scoring 100% in a few days.
+        </p>
+        <p class="hidden" style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-text-color);">
+            Remember this: Concept is concept. Reality is reality.
+        </p>
+        <p class="hidden" style="margin-top: 1.5rem;">
+            There is no shortcut for an IIT-level degree. Hard work is always hard work. People will try to fool you with easy promises because it's what you want to hear. Your job is to be smart enough to see through the noise. Think for yourself, analyze what is best for <strong>you</strong>, and choose the path that respects your effort. Your future is up to you, and the choices you make today will define it.
+        </p>
+    </section>
+    
+    <script>
+        // Scroll Animation Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", () => {
+                const isActive = question.classList.contains("active");
+
+                // Optional: Close all other open accordions
+                // faqQuestions.forEach(q => {
+                //     q.classList.remove("active");
+                //     q.nextElementSibling.style.maxHeight = null;
+                // });
+
+                // Toggle the clicked one
+                if (!isActive) {
+                    question.classList.add("active");
+                    const answer = question.nextElementSibling;
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                     question.classList.remove("active");
+                     question.nextElementSibling.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
