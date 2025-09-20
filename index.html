@@ -14,7 +14,7 @@
             --card-bg-color: #1a1a1a;
             --primary-text-color: #f0f0f0;
             --secondary-text-color: #a0a0a0;
-            --accent-color: #00aaff; /* Slightly brighter blue for contrast with yellow logo */
+            --accent-color: #00aaff;
             --green-color: #28a745;
             --red-color: #dc3545;
             --border-color: #333;
@@ -33,19 +33,15 @@
         .hero {
             height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; padding: 2rem;
-            
-            /* Premium layered background */
             background: 
-                linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), /* Dark overlay for text readability */
-                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover, /* Main tech background */
-                url('https://images.unsplash.com/photo-1497215865223-997bf9b4862c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover; /* Subtle premium texture */
-            background-blend-mode: overlay, normal, normal; /* Blend modes for layering */
+                linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 1)),
+                url('https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?q=80&w=2061&auto=format&fit=crop') no-repeat center center/cover;
         }
         .hero .logo {
-            width: clamp(150px, 25vw, 250px); /* Responsive width for the logo */
+            width: clamp(150px, 25vw, 250px);
             height: auto;
-            margin-bottom: 2rem; /* Space below the logo */
-            filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5)); /* Subtle glow for the logo */
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)); /* Glow matches the logo's gold color */
         }
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; margin-bottom: 1rem; }
         .hero p { font-size: clamp(1rem, 2vw, 1.5rem); max-width: 800px; color: var(--secondary-text-color); margin-bottom: 2rem; }
@@ -163,8 +159,9 @@
 <body>
 
     <section class="hero">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrfJ3BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEUAAAAA//8AIICAoKDQ0ND///8AAAAAAAAAAAAAAAArKyve3t7///8AAAAAQECAgIDQ0ND///8AAAAAAAAAAAAAAID///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQECAgIDQ0ND///8AIKCAgIAAAAAAAAAAAAAAAAAAAAAAAAB/f3+AgIAAAAAAAACAgICDg4P///8AIKDOzv89gN7RAAAALXRSTlMAAAEHCAoMDxAREhUXGBscHR4fICEiIyQlJicuLzAxMjM0Njc4OTs9Pj9BQ0RGR0tOUFVYXV5fYGVoaWpsbG9wcXJzdHV3eHl8gIqNjpCVlpcXGhobHh9goaKmq6+wsbK0tbm6u7y9vr/BwsPEys/R1dXa3uDi4uPj5eXp6enr7O3u7/Dx8vLz8/P19fX29vb39/f5+fn6+vr7/f39/f3+///+q7jG2wAAAAFiS0dEAIgFHUgAAAAJcEhZNAADtSAAA7UgBT/2kAAD/lSURBVHja7N1nVxRbXhbbgHfv3u/t7a3XkXUXkREURURMFE8UVEQQFEQQBEUQBUUUBBFE0H+cO6W3g0QggEDMvX7+nOfe+b7d07l2+p1zvtdA0AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAYD9B752E1p89jNbeYmtO4mtf4mtP4mt/4mu+6mu+6Gu+7mtP4mtP4mtP4mtP4mtO4mtO4mt/4mu+6Gu+6Gu+7mtO4mtO4mtO4mtO4mt/4mu+6Gu+6Wu+7mu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wt/4mtO4mtO4mtO4mt/4mu+6Gu+6Gu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu+7Wu
-" alt="Unknown IITians Logo" class="logo">
+        
+        <img src="https://i.ibb.co/F4p8FkpG/logoofficial.png" alt="Unknown IITians Logo" class="logo">
+        
         <h1>IITM BS Degree: The Complete Picture</h1>
         <p>Data, opportunities, and the smart path to success in India's leading online degree program.</p>
         <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
@@ -431,21 +428,12 @@
         faqQuestions.forEach(question => {
             question.addEventListener("click", () => {
                 const isActive = question.classList.contains("active");
-
-                // Optional: Close all other open accordions (uncomment if desired)
-                // faqQuestions.forEach(q => {
-                //     q.classList.remove("active");
-                //     q.nextElementSibling.style.maxHeight = null;
-                // });
-
-                // Toggle the clicked one
-                if (!isActive) {
-                    question.classList.add("active");
-                    const answer = question.nextElementSibling;
+                question.classList.toggle("active");
+                const answer = question.nextElementSibling;
+                if (question.classList.contains("active")) {
                     answer.style.maxHeight = answer.scrollHeight + "px";
                 } else {
-                     question.classList.remove("active");
-                     question.nextElementSibling.style.maxHeight = null;
+                    answer.style.maxHeight = null;
                 }
             });
         });
